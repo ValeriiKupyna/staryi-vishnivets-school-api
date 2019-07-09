@@ -20,6 +20,9 @@ router.get('/achievement', routes.achievementsController.getSchoolAchievements);
 
 MongoClient.connect(mongo_uri, { useNewUrlParser: true })
     .then((client) => {
+
+        console.log(mongo_uri);
+
         const db = client.db('school');
         index.locals.welcomeCollection = db.collection('welcome');
         index.locals.detailsCollection = db.collection('details');
