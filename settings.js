@@ -1,8 +1,8 @@
-const APIServerPort = 3000;
+const APIServerPort = process.env.PORT || 3000;
 
 const database = {
-    host: 'localhost',
-    port: 27017,
+    host: process.env.DATABASE_HOST || 'localhost',
+    port: process.env.DATABASE_PORT || 27017,
 };
 
 module.exports = {
