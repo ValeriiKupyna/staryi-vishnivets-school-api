@@ -6,7 +6,7 @@ const routes = require('./routers');
 const index = express();
 
 const MongoClient = require('mongodb').MongoClient;
-const mongo_uri = `mongodb://${setting.database.host}:${setting.database.port}`;
+const mongo_uri = process.env.MONGO_URL || `mongodb://${setting.database.host}:${setting.database.port}`;
 
 const router = express.Router();
 
