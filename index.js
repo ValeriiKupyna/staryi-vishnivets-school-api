@@ -6,8 +6,9 @@ const routes = require('./routers');
 const index = express();
 
 const MongoClient = require('mongodb').MongoClient;
-const mongo_uri = process.env.MONGO_URL || `mongodb://${setting.database.host}:${setting.database.port}`;
+// const mongo_uri = process.env.MONGO_URL || `mongodb://${setting.database.host}:${setting.database.port}`;
 
+const mongo_uri = 'mongodb://heroku_tjzpp08t:12Goo0206@@ds249127.mlab.com:49127/heroku_tjzpp08t';
 const router = express.Router();
 
 index.use(cors({}));
